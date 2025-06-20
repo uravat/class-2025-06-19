@@ -1,6 +1,37 @@
 ---
 title: "Economic Connectedness"
 format: html
+execute:
+ echo: FALSE
+ warning: FALSE
 ---
 
 opportuntiny insights ask  AI. 
+
+```{r}
+library(tidyverse)
+library(primer.data)
+```
+
+```{r}
+#|echo: false
+# Assuming the tibble is named `connectedness`
+
+ggplot(connectedness, aes(x = population, y = connectedness)) +
+  geom_point(alpha = 0.6, color = "darkblue") +
+  geom_smooth(method = "loess", se = FALSE, color = "firebrick", size = 1) +
+  scale_x_log10(
+    breaks = c(1000, 10000, 100000, 1000000, 10000000),
+    labels = scales::label_comma() ) +
+  labs(
+    title = "County Connectedness vs Population",
+    x = "Population",
+    y = "Connectedness"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+
+```
