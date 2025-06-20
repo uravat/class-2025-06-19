@@ -7,14 +7,14 @@ execute:
 ---
 
 <!-- opportuntiny insights ask  AI. --> 
-
-
-https://tinyurl.com/muafxp9u
-
+# Abstract
 Over the last four decades, the financial circumstances into which children have been born have increasingly determined where they have ended up as adults. But an expansive new study, based on billions of social media connections, has uncovered a powerful exception to that pattern that helps explain why certain places offer a path out of poverty.
 
 For poor children, living in an area where people have more friendships that cut across class lines significantly increases how much they earn in adulthood, the new research found.
 
+# Introduction
+
+This report examines the incidence of tuberculosis (TB) in three countries—Afghanistan, Brazil, and China—between 1999 and 2000, based on data provided by the World Health Organization. The figure below visualizes the number of reported TB cases in each country across the two years, highlighting stark differences in absolute case counts and trends. While China reports the highest number of cases, the data also reveal significant increases in Brazil and Afghanistan during this short period. This visualization provides a foundation for discussing not only disease burden but also public health reporting and response capacity across different regions.
 
 ```{r}
 #| message = FALSE
@@ -22,6 +22,21 @@ library(tidyverse)
 library(primer.data)
 ```
 
+```{r}
+connectedness |>
+    drop_na() |>
+    ggplot(aes(x = population)) +
+      geom_histogram(bins = 100, fill = "steelblue", color = "white", alpha = 0.8) +
+        labs(
+              title = "Distribution of County Population",
+              subtitle = "Populations are highly skewed",
+              x = "Population",
+              y = "Number of Counties"
+            ) +
+            scale_x_log10(labels = scales::comma_format()) + 
+    theme_minimal()
+
+```
 ```{r}
 #|echo: false
 # Assuming the tibble is named `connectedness`
