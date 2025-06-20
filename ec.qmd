@@ -17,7 +17,7 @@ For poor children, living in an area where people have more friendships that cut
 
 
 ```{r}
-#| message - FALSE
+#| message = FALSE
 library(tidyverse)
 library(primer.data)
 ```
