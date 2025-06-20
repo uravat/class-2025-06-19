@@ -6,9 +6,18 @@ execute:
  warning: FALSE
 ---
 
-opportuntiny insights ask  AI. 
+<!-- opportuntiny insights ask  AI. --> 
+
+
+https://tinyurl.com/muafxp9u
+
+Over the last four decades, the financial circumstances into which children have been born have increasingly determined where they have ended up as adults. But an expansive new study, based on billions of social media connections, has uncovered a powerful exception to that pattern that helps explain why certain places offer a path out of poverty.
+
+For poor children, living in an area where people have more friendships that cut across class lines significantly increases how much they earn in adulthood, the new research found.
+
 
 ```{r}
+#| message - FALSE
 library(tidyverse)
 library(primer.data)
 ```
